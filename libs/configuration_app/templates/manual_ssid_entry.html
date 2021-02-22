@@ -2,8 +2,10 @@
 
 {% block body %}
   <div id="mainContent">
-    <h1>WiFi Setup</h1>
-    <div class="wifiIcon"></div>
+    <img src="{{ url_for('static', filename='images/Anzen_Logo_NoText.png') }}" width="228.5" height="91">
+   
+    <h1> WiFi Setup</h1>
+  </br>
 
     <form action="{{ url_for('save_credentials') }}" method=post>
       <ul>

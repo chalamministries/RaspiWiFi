@@ -2,22 +2,10 @@
 
 {% block body %}
   <div id="mainContent">
-    <div id="wpaStatus">
-      <ul>
-        {% if config_hash['wpa_enabled'] == '1': %}
-          <li><a href="{{ url_for('wpa_settings') }}">Config. Mode WPA: ENABLED</a></li>
-          <li><a href="{{ url_for('wpa_settings') }}">Key: {{ config_hash['wpa_key'] }}</a></li>
-        {% endif %}
-
-        {% if config_hash['wpa_enabled'] == '0': %}
-          <li><a href="{{ url_for('wpa_settings') }}">Config. Mode WPA: DISABLED</a></li>
-      {% endif %}
-      </ul>
-    </div>
-
-    <h1>WiFi Setup</h1>
-    <div class="wifiIcon"></div>
-
+    <img src="{{ url_for('static', filename='images/Anzen_Logo_NoText.png') }}" width="228.5" height="91">
+   
+    <h1> WiFi Setup</h1>
+  </br>
     <form action="{{ url_for('save_credentials') }}" method=post>
       <ul>
         <li><label for="ssid">Select your WiFi network</label></li>
