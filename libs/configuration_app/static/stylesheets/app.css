@@ -10,41 +10,47 @@ padding:0;
 }
 
 body{
-    background-color: #000;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#eb2f2f), to(#b82e31));
+    background-image: linear-gradient(180deg, #eb2f2f, #b82e31);
     margin:0;
     color: white;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
 }
 
 div#mainContent{
-    padding:.3em;
-    background-color: #000;
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 3.5rem;
+    background-color: #393938;
+    width: 40%;
+    display: flex;
+    margin-top: 20px;
+    padding: 40px 20px;
     color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
 div#mainContent h1 {
-    margin:0 0 .5em 0;
-    font-size:3rem;
-}
-
-div#mainContent ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-div#mainContent form {
-    margin-top:-2em;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 44px;
+    font-weight: 400;
 }
 
 div#wpaStatus{
     padding: 4px;
     margin: 0 0 10px 0;
     width: 250px;
-    background-color: #5C791A;
+    background-color: #928043;
     text-align: left;
     font-size: .3em;
 }
@@ -53,75 +59,70 @@ div#wpaStatus a{
     color: #fff;
 }
 
-label[for=ssid],
-label[for=wifi_key]{
-    font-size:1.9rem;
+
+img.logo {
+    width: 121px;
+    heigh: 121px;
+}
+
+form {
+   margin-top: -40px;
+width: 100%;
 }
 
 /* Select
 ---------------------------------------------------------*/
-
-li label {
-    display:inline-block;
-    margin: 0.5em 0;
-    padding: 0.5em 0;
-}
-
-li.wifiNetwork {
-    position: relative;
-    margin: 0;
-}
-
-li.wifiNetwork:after {
-    content: '▼';
-    position: absolute;
-    width: 25px;
-    color: #80BD00;
-    font-weight: bold;
-    font-size: 1.4rem;
-    right: 0px;
-    top: 40%;
-    border-radius: 3px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-select.wifiNetworkInputs {
-    position: relative;
-    width: 100%;
-    background: #111;
-    color: #999;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    padding: 1em;
-    margin: 0;
-    border-radius: 3px;
-    cursor: pointer;
-    height: auto;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+.div-block {
+margin-top: 12px;
+padding-top: 10px;
+padding-bottom: 10px;
+-webkit-box-flex: 0;
+-webkit-flex: 0 auto;
+-ms-flex: 0 auto;
+flex: 0 auto;
+border-radius: 5px;
+background-color: #fff;
 }
 
 .wifiNetworkInputs{
-    width: 100%;
-    padding:1em;
-    font-size: 1.4rem;
-    color: #999;
-    background: #111;
-    border:#999 solid 1px;
+display: block;
+width: 100%;
+height: 38px;
+padding: 8px 12px;
+font-size: 20px;
+line-height: 1.4286;
+vertical-align: middle;
+margin-bottom: 0px;
+border: 1px solid transparent;
+background-color: transparent;
+color: #b82e31;
+text-align: left;
+}
+
+::placeholder {
+color: #b82e31;
 }
 
 .wifiConnectButton{
     width: 100%;
-    margin:2em 0;
-    padding:.5em;
-    background-color: #80BD00;
-    font-size: 2rem;
-    color: #fff;
+margin-top: 12px;
+padding-top: 20px;
+padding-bottom: 20px;
+align-self: stretch;
+flex: 0 auto;
+border-radius: 5px;
+background-color: #b82e31;
+font-size: 20px;
+color: #fff;
+border:0;
+display: inline-block;
+cursor: pointer;
 }
 
+div.manualEntry{
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
 .manualSSIDEntry{
 	font-size: 1rem;
 	color: #fff;
@@ -136,16 +137,30 @@ div#wpaCredentialsForm{
     width: 46px;
 }
 
-div#saveCredentialsOutput{
-  width: 60%;
-  margin: 0 0 0 20%;
-  text-align: center;
-  font-size: 1.7em;
+.saveCredentialsSSID{
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: stretch;
+    border-radius: 5px;
+    background-color: #fffff;
+    color: #b82e31;
+    font-size: 50px;
+    line-height: 60px;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+text-align: center;
+   display: block;
 }
 
-.saveCredentialsSSID{
-  color: #80BD00;
-  font-size: 2em;
+.paragraph {
+    margin-top: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    text-align: center;
 }
 
 /* Wifi Icon
@@ -153,40 +168,35 @@ div#saveCredentialsOutput{
 
 .wifiIcon {
     padding: 10px;
+    margin-top: 30px;
 }
 .wifiIcon, .wifiIcon:before {
     display: inline-block;
-    border: 40px double transparent;
+    border: 22px double transparent;
     border-top-color: currentColor;
     border-radius: 50%;
-    width: 5; height: 5;
 }
 .wifiIcon:before {
     content: '';
     width: 0; height: 0;
 }
+
 /* Desktop
 ---------------------------------------------------------*/
 
 @media (min-width: 800px) {
-    div#mainContent h1 {
-        font-size:4.5rem;
-    }
     div#mainContent {
-        max-width:768px;
-    }
-    li.wifiNetwork:after {
-        content: '▼';
-        position: absolute;
-        width: 50px;
-        color: #80BD00;
-        font-weight: bold;
-        font-size: 2rem;
-        right: 0px;
-        bottom: 50px;
-        border-radius: 3px;
-        pointer-events: none;
-        z-index: 2;
+        max-width:940px;
     }
 
+}
+@media (max-width: 640px) {
+   div#mainContent {
+	width: 90%;
+   }
+   div#mainContent h1 {
+	font-size: 28px;
+	margin-top: 10px;
+	line-height: 32px;
+   }
 }

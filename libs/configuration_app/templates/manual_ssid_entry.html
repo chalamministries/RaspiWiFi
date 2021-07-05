@@ -1,22 +1,18 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <div id="mainContent">
-    <img src="{{ url_for('static', filename='images/Anzen_Logo_NoText.png') }}" width="228.5" height="91">
-   
-    <h1> WiFi Setup</h1>
-  </br>
+    <div class="wifiIcon"></div>
 
     <form action="{{ url_for('save_credentials') }}" method=post>
-      <ul>
-        <li><label for="ssid">Enter your network SSID:</label></li>
-        <li><input type="text" name="ssid", class="wifiNetworkInputs"></li>
+        <h1>Manual Setup</h1>
+        <div class="div-block">
+	    <input type="text" name="ssid", class="wifiNetworkInputs" placeholder="Enter Your Network SSID" />
+	</div>
+	<div class="div-block">
+           <input type="text" name="wifi_key" class="wifiNetworkInputs" placeholder="Enter Your Wifi Password" />
+        </div>
 
-        <li><label for="wifi_key">Your Wifi password</label></li>
-        <li><input type="password" name="wifi_key", class="wifiNetworkInputs"></li>
+        <input type="submit" class="wifiConnectButton" value="Submit">
 
-        <input type="submit", class="wifiConnectButton">
-      </ul>
     </form>
-  </div>
 {% endblock %}
